@@ -13,7 +13,7 @@ class RecipebookController extends Controller
      */
     public function index()
     {
-        return view('layouts.app');
+        return view('recipebook.home');
     }
 
     /**
