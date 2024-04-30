@@ -12,7 +12,14 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('recipebooks', function (Blueprint $table) {
-            $table->id();
+            $table->id('recipe_id');
+            $table->string('title');
+            $table->text('description');
+            $table->integer('cooking_time');
+            $table->enum('difficulty', ['easy', 'medium', 'hard']);
+            $table->integer('servings');
+            $table->text('ingredients');
+            $table->text('steps');
             $table->timestamps();
         });
     }
